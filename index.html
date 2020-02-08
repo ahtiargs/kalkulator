@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kalkulator Sederhana </title>
+<style>
+	body { font-family: arial;
+	margin-left: 40px;
+}
+	h1 {font-size:30px;
+		color: blue;
+		line-height: 60px;
+		float:right;
+		margin-right: 50%;
+		line-height: 80px;
+}
+ </style>
+</head>
+<body>
+
+<h1><strong> KALKULATOR </strong></h1>
+<div>
+	<form>
+		<input type="number" id="input1"> 
+		<input type="checkbox" id="checkbox1"> 
+	</form>
+</div>
+<br>
+<div>
+	<form>
+		<input type="number" id="input2"> 
+		<input type="checkbox" id="checkbox2">
+	</form>
+</div>
+<br>
+<div>
+	<form>
+		<input type="number" id="input3"> 
+	<input type="checkbox" id="checkbox3">
+	</form>
+</div>
+<br>
+	<button onclick="tambah()">+</button>
+	<button onclick="kurang()">-</button>
+	<button onclick="kali()">x</button>
+	<button onclick="bagi()">/</button>
+ 
+ <br>
+ <hr>
+	<form> Hasil: <input type="number" id="hasil"> </form>
+ 
+ 
+ <script>
+	var input1 = document.getElementById("input1");
+	var input2 = document.getElementById("input2");
+	var input3 = document.getElementById("input3");
+	
+	
+	var hasil=document.getElementById("hasil");
+	
+function tambah(){
+	hasil.value = (parseInt(input1.value) + parseInt(input2.value) + parseInt(input3.value));
+}	
+function kurang(){
+	hasil.value = (parseInt(input1.value) - parseInt(input2.value) - parseInt(input3.value));
+}	
+function kali(){
+	hasil.value = (parseInt(input1.value) * parseInt(input2.value) * parseInt(input3.value));
+}
+function bagi(){
+	hasil.value = (parseInt(input1.value) / parseInt(input2.value) / parseInt(input3.value));
+}		
+	
+</script>
+
+</body>
+</html>
